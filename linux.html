@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux</title>
+    <link rel="stylesheet" href="linux-style.css">
+</head>
+<body>
+    <!-- Меню навігації -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Tech Docs</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Git</a></li>
+                <li><a href="linux.html" class="active">Linux</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Головний контент сторінки Linux -->
+    <section class="container">
+        <h2>Основи Linux</h2>
+
+        <!-- Коротка інформація про ОС GNU/Linux -->
+        <h3>Коротка інформація про ОС GNU/Linux:</h3>
+        <p>Linux — це родина операційних систем, заснованих на ядрі Linux. Вони є вільними, відкритими та використовуються у всьому світі на серверах, комп'ютерах, мобільних пристроях та інших пристроях.</p>
+
+        <!-- Перелік популярних дистрибутивів -->
+        <h3>Популярні дистрибутиви Linux:</h3>
+        <ul>
+            <li>Ubuntu</li>
+            <li>Debian</li>
+            <li>Fedora</li>
+            <li>Arch Linux</li>
+            <li>Linux Mint</li>
+        </ul>
+
+        <!-- Приклади команд роботи в Linux CLI -->
+        <h3>Основні команди Linux CLI:</h3>
+        <ul>
+            <li><strong>pwd</strong> — Показати поточну директорію</li>
+            <li><strong>echo</strong> — Вивести текст на екран</li>
+            <li><strong>ls</strong> — Показати список файлів у директорії</li>
+            <li><strong>cd</strong> — Переміститися до іншої директорії</li>
+            <li><strong>touch</strong> — Створити новий файл</li>
+            <li><strong>mkdir</strong> — Створити нову директорію</li>
+            <li><strong>cp</strong> — Копіювати файли або директорії</li>
+            <li><strong>mv</strong> — Перемістити або перейменувати файли</li>
+            <li><strong>rm</strong> — Видалити файли або директорії</li>
+            <li><strong>history</strong> — Показати історію виконаних команд</li>
+        </ul>
+
+        <!-- BASH-скрипт авторизації -->
+        <h3>BASH-cкрипт для імітації авторизації:</h3>
+        <pre>
+#!/bin/bash
+echo "Введіть ваше ім'я користувача:"
+read username
+
+if [ "$username" == "admin" ]; then
+    echo "Авторизація успішна, $username!"
+else
+    echo "Авторизація не вдалася. Невірне ім'я користувача."
+fi
+        </pre>
+
+        <!-- Джерела інформації -->
+        <h3>Джерела інформації по Linux:</h3>
+        <ul>
+            <li><a href="https://www.kernel.org/" target="_blank">Офіційний сайт ядра Linux</a></li>
+            <li><a href="https://www.ubuntu.com/" target="_blank">Офіційний сайт Ubuntu</a></li>
+            <li><a href="https://www.linux.org/" target="_blank">Linux.org</a></li>
+            <li><a href="https://www.gnu.org/" target="_blank">Проект GNU</a></li>
+        </ul>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 Tech Docs</p>
+    </footer>
+</body>
+</html>

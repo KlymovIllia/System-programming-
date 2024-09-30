@@ -1,0 +1,107 @@
+/* Основні стилі для Linux */
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa; /* Світлий фон */
+    color: #444; /* Темно-сірий текст */
+    font-size: 16px;
+}
+
+/* Контейнер */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Менше меню для Linux */
+.navbar {
+    background-color: #0066cc; /* Синій фон */
+    padding: 10px 0; /* Менший відступ */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Трохи менша тінь */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px; /* Менша відстань між пунктами меню */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em; /* Трохи менший розмір тексту */
+    padding: 8px 12px; /* Зменшені відступи */
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: white; /* Білий фон при наведенні */
+    color: #0066cc; /* Синій текст при наведенні */
+}
+
+/* Відступ для вмісту сторінки */
+section {
+    margin-top: 80px; /* Відступ зверху для врахування меншого меню */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #0066cc;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        background-color: #0066cc;
+        padding: 10px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px;
+    }
+}

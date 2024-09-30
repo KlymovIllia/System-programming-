@@ -1,0 +1,187 @@
+/* Основні стилі для Git */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* Світлий сіруватий фон */
+    color: #212529; /* Трохи темніший текст */
+    font-size: 18px; /* Більший шрифт */
+    line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0; /* Більші відступи */
+}
+
+/* Меню для Git */
+.navbar {
+    background-color: #343a40; /* Темний фон */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Більша тінь */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    color: #ffc107; /* Жовтий логотип */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Більша відстань між пунктами меню */
+}
+
+.nav-links a {
+    color: #ffc107; /* Жовтий текст */
+    text-decoration: none;
+    font-size: 1.2em; /* Трохи більший текст */
+    padding: 10px 20px; /* Більші відступи */
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: #ffc107; /* Жовтий фон при наведенні */
+    color: #343a40; /* Темний текст при наведенні */
+}
+
+/* Стилі секцій */
+section {
+    margin-top: 100px; /* Відступ зверху для врахування фіксованого меню */
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Більша тінь */
+}
+
+/* Стилі заголовків */
+section h2 {
+    font-size: 2em; /* Більший заголовок */
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+/* Блоки переваг */
+#advantages .features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#advantages .feature {
+    background-color: #ffc107; /* Жовтий фон */
+    padding: 20px;
+    border-radius: 12px;
+    color: #343a40;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+#advantages .feature h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+#advantages .feature p {
+    font-size: 1.1em;
+    color: #212529;
+}
+
+/* Сертифікат */
+#certificate {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#certificate img {
+    max-width: 70%; /* Інший розмір зображення */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тінь посилена */
+    margin-bottom: 30px;
+}
+
+#certificate .btn {
+    display: inline-block;
+    background-color: #343a40; /* Темна кнопка */
+    color: #ffc107; /* Жовтий текст */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    transition: background-color 0.3s ease;
+}
+
+#certificate .btn:hover {
+    background-color: #ffc107; /* Жовтий фон при наведенні */
+    color: #343a40; /* Темний текст */
+}
+
+/* Футер */
+footer {
+    background-color: #343a40;
+    color: #ffc107;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #343a40;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        background-color: #343a40;
+        padding: 10px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #ffc107;
+        margin: 4px;
+    }
+}
